@@ -1,0 +1,2551 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background:
+        /* ✨ ESTRELLAS MUY PEQUEÑAS */
+
+        radial-gradient(circle at 2% 5%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 5% 12%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 8% 4%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 11% 17%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 14% 8%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 17% 22%, rgba(255,255,255,.6) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 20% 6%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 23% 15%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 26% 3%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 29% 19%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 32% 9%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 35% 25%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 38% 5%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 41% 16%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 44% 8%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 47% 23%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 50% 4%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 53% 13%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 56% 7%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 59% 20%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 62% 3%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 65% 17%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 68% 9%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 71% 24%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 74% 5%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 77% 14%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 80% 7%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 83% 21%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 86% 4%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 89% 16%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 92% 8%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 95% 23%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 98% 6%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+
+        /* ✨ SEGUNDA CAPA DE ESTRELLAS */
+
+        radial-gradient(circle at 4% 31%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 9% 27%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 13% 36%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 18% 30%, rgba(255,255,255,.6) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 22% 40%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 27% 32%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 31% 43%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 36% 35%, rgba(255,255,255,.6) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 40% 29%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 45% 39%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 49% 31%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 54% 42%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 58% 34%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 63% 28%, rgba(255,255,255,.6) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 67% 40%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 72% 33%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 76% 44%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 81% 30%, rgba(255,255,255,.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 85% 38%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 90% 32%, rgba(255,255,255,.65) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 94% 41%, rgba(255,255,255,.75) 0 1px, transparent 1.5px),
+
+        /* ⭐ ESTRELLAS DESTACADAS */
+
+        radial-gradient(circle at 7% 15%, white 0 1.7px, transparent 3px),
+        radial-gradient(circle at 25% 12%, white 0 1.5px, transparent 3px),
+        radial-gradient(circle at 43% 18%, white 0 1.7px, transparent 3px),
+        radial-gradient(circle at 61% 11%, white 0 1.5px, transparent 3px),
+        radial-gradient(circle at 78% 18%, white 0 1.7px, transparent 3px),
+        radial-gradient(circle at 93% 12%, white 0 1.5px, transparent 3px),
+
+        /* ☁️ NUBES MUY SUAVES */
+
+        radial-gradient(
+            ellipse 45% 13% at 17% 55%,
+            rgba(255,255,255,.07),
+            transparent 70%
+        ),
+
+        radial-gradient(
+            ellipse 55% 15% at 82% 61%,
+            rgba(255,255,255,.065),
+            transparent 72%
+        ),
+
+        radial-gradient(
+            ellipse 40% 12% at 48% 69%,
+            rgba(255,255,255,.05),
+            transparent 70%
+        ),
+
+        /* 🌅 LUZ DEL ATARDECER */
+
+        radial-gradient(
+            ellipse 75% 30% at 50% 90%,
+            rgba(255,190,170,.25),
+            transparent 70%
+        ),
+
+        /* 🌌 CIELO */
+
+        linear-gradient(
+            to bottom,
+            #24213f 0%,
+            #343052 12%,
+            #51456b 27%,
+            #765b78 43%,
+            #a87386 59%,
+            #d28c91 73%,
+            #efa69b 86%,
+            #f8c0a5 94%,
+            #ffe0b5 100%
+        );
+
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+/* 🌸 TÍTULO PRINCIPAL */
+
+h1 {
+    font-family: "Edwardian Script ITC", "Bickham Script Pro", "Segoe Script", cursive;
+    font-size: 5.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #f8c8dc,
+        #d8b4fe,
+        #ffcba4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 25px rgba(255, 200, 220, 0.4);
+}
+
+
+/* 🌷 LETRA INICIAL */
+
+.inicial {
+    font-size: 8rem;
+    font-weight: normal;
+}
+
+
+/* ✨ SUBTÍTULOS */
+
+h2 {
+    font-family: "Segoe Script", cursive;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #f8c8dc,
+        #d8b4fe,
+        #ffcba4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 15px rgba(255, 200, 220, 0.4);
+}
+
+
+/* 🪽 TEXTO */
+
+p {
+    font-size: 18px;
+    text-align: center;
+
+    color: #fff1f8;
+
+    text-shadow:
+        0 0 8px rgba(255, 200, 220, 0.35),
+        0 2px 5px rgba(60, 30, 80, 0.35);
+}
+
+
+/* 🎀 BOTÓN */
+
+button {
+    background: linear-gradient(
+        135deg,
+        #EC9C9D,
+        #d8b4fe,
+        #EC9C9D
+    );
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    padding: 12px 24px;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display: block;
+    margin: 20px auto;
+
+    box-shadow:
+        0 5px 20px rgba(70, 30, 90, 0.35),
+        0 0 15px rgba(220, 160, 230, 0.25);
+
+    text-shadow:
+        0 1px 4px rgba(50, 20, 70, 0.4);
+}
+
+
+/* ✨ EFECTO AL PASAR EL RATÓN */
+
+button:hover {
+    background: linear-gradient(
+        135deg,
+        #d8b4fe,
+        #EC9C9D,
+        #d8b4fe
+    );
+
+    box-shadow:
+        0 5px 25px rgba(220, 160, 230, 0.45),
+        0 0 20px rgba(255, 200, 230, 0.35);
+}
+/* 📋 REGLAS DEL CHAT */
+
+.reglas p {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+}
+.reglas {
+    position: relative;
+
+    width: 90%;
+    max-width: 650px;
+
+    margin: 40px auto;
+    padding: 28px;
+
+    border-radius: 14px;
+
+    /* 📼 Pantalla oscura y transparente */
+    background:
+        linear-gradient(
+            rgba(30, 20, 45, 0.58),
+            rgba(20, 15, 35, 0.68)
+        );
+
+    border: 1px solid rgba(255, 210, 235, 0.28);
+
+    box-shadow:
+        0 0 25px rgba(20, 10, 40, 0.5),
+        inset 0 0 35px rgba(255, 180, 210, 0.08);
+
+    backdrop-filter: blur(4px);
+
+    overflow: hidden;
+
+    /* 📺 Pequeña curvatura de pantalla */
+    transform: perspective(800px) rotateX(0.4deg);
+}
+
+
+/* 📺 LÍNEAS DE ESCANEO */
+
+.reglas::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.08) 0px,
+            rgba(255,255,255,0.08) 1px,
+            rgba(0,0,0,0.08) 2px,
+            transparent 4px
+        );
+
+    opacity: 0.65;
+
+    z-index: 3;
+}
+
+
+/* 📼 INTERFERENCIA VHS */
+
+.reglas::after {
+    content: "";
+
+    position: absolute;
+
+    left: -10%;
+    top: 0;
+
+    width: 120%;
+    height: 100%;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            rgba(255,255,255,0.025) 2px,
+            transparent 4px
+        );
+
+    animation: vhsInterferencia 3s infinite;
+
+    z-index: 4;
+}
+
+
+/* 📼 MOVIMIENTO DE LA CINTA */
+
+@keyframes vhsInterferencia {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+    8% {
+        transform: translateY(-3px);
+        opacity: 0.65;
+    }
+
+    10% {
+        transform: translateY(2px);
+        opacity: 0.4;
+    }
+
+    20% {
+        transform: translateY(0);
+        opacity: 0.55;
+    }
+
+    45% {
+        transform: translateY(1px);
+        opacity: 0.35;
+    }
+
+    47% {
+        transform: translateY(-4px);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    75% {
+        transform: translateY(2px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+}
+
+
+/* 📺 TEXTO VHS */
+
+.reglas p {
+    position: relative;
+
+    display: block;
+
+    margin: 10px 0;
+
+    text-align: center;
+
+    z-index: 5;
+
+    text-shadow:
+        -2px 0 rgba(255, 80, 150, 0.22),
+        2px 0 rgba(100, 180, 255, 0.22),
+        0 0 8px rgba(255, 200, 220, 0.35);
+}
+
+
+/* 🌈 ABERRACIÓN CROMÁTICA DEL TÍTULO */
+
+.reglas h2 {
+    position: relative;
+
+    z-index: 5;
+
+    text-shadow:
+        -2px 0 rgba(255, 80, 150, 0.3),
+        2px 0 rgba(100, 180, 255, 0.3),
+        0 0 15px rgba(255, 200, 220, 0.45);
+}
+
+
+/* 📼 FRANJA DE DISTORSIÓN */
+
+.reglas {
+    animation: vhsJitter 6s infinite;
+}
+
+@keyframes vhsJitter {
+
+    0%, 92%, 100% {
+        transform: translateX(0);
+    }
+
+    93% {
+        transform: translateX(-2px);
+    }
+
+    94% {
+        transform: translateX(2px);
+    }
+
+    95% {
+        transform: translateX(-1px);
+    }
+
+    96% {
+        transform: translateX(0);
+    }
+}
+/* ================================================= */
+/* 📼 FILTRO VHS NOSTÁLGICO PARA TODA LA PÁGINA */
+/* ================================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* 📺 SCANLINES + TEXTURA DE CINTA */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.035) 0px,
+            rgba(255,255,255,0.035) 1px,
+            rgba(0,0,0,0.045) 2px,
+            transparent 4px
+        );
+
+    mix-blend-mode: overlay;
+
+    opacity: 0.75;
+}
+
+
+/* 📼 INTERFERENCIA Y BRILLO DE CINTA */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    top: -20%;
+    left: -10%;
+
+    width: 120%;
+    height: 140%;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 45%,
+            rgba(20, 10, 40, 0.16) 100%
+        );
+
+    animation: vhsScreen 7s infinite;
+}
+
+
+/* 📼 PEQUEÑA FLUCTUACIÓN DE LA IMAGEN */
+
+@keyframes vhsScreen {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.55;
+    }
+
+    8% {
+        transform: translate(-1px, 1px);
+        opacity: 0.65;
+    }
+
+    10% {
+        transform: translate(1px, -1px);
+        opacity: 0.45;
+    }
+
+    25% {
+        transform: translate(0, 0);
+        opacity: 0.55;
+    }
+
+    48% {
+        transform: translate(0, 1px);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(-2px, 0);
+        opacity: 0.45;
+    }
+
+    52% {
+        transform: translate(1px, 0);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+
+    93% {
+        transform: translate(-1px, 1px);
+        opacity: 0.7;
+    }
+
+    95% {
+        transform: translate(2px, -1px);
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.55;
+    }
+}
+/* 📼 LÍNEA DE TRACKING VHS */
+
+html::before {
+    content: "";
+
+    position: fixed;
+
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.18),
+        0 0 20px rgba(180,160,255,0.12);
+
+    pointer-events: none;
+
+    z-index: 10001;
+
+    animation: trackingLine 8s linear infinite;
+}
+
+@keyframes trackingLine {
+
+    0% {
+        top: -10px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 0.8;
+    }
+
+    12% {
+        opacity: 0.2;
+    }
+
+    45% {
+        opacity: 0.5;
+    }
+
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+/* ========================================= */
+/* ⭐ ESTRELLA SECRETA */
+/* ========================================= */
+
+#estrella-secreta {
+    display: none;
+}
+
+
+/* ⭐ Posición de la estrella */
+
+.estrella-secreta {
+    position: fixed;
+
+    top: 27%;
+    left: 73%;
+
+    z-index: 100000;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.8);
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+/* ✨ La estrella reacciona al mouse */
+
+.estrella-secreta:hover {
+    transform: scale(1.8);
+
+    color: white;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 18px #f8c8dc;
+}
+
+
+/* ========================================= */
+/* 📼 PANTALLA VHS */
+/* ========================================= */
+
+.pantalla-vhs {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99998;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(8, 5, 20, 0.88);
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* 📺 Activar VHS */
+
+#estrella-secreta:checked ~ .pantalla-vhs {
+    display: flex;
+
+    pointer-events: auto;
+}
+
+
+/* ========================================= */
+/* 📼 LÍNEAS DE ESCANEO */
+/* ========================================= */
+
+.pantalla-vhs::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+
+            rgba(255,255,255,0.07) 0px,
+            rgba(255,255,255,0.07) 1px,
+
+            rgba(0,0,0,0.08) 2px,
+
+            transparent 4px
+        );
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* ========================================= */
+/* 📺 BRILLO DE PANTALLA */
+/* ========================================= */
+
+.pantalla-vhs::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+
+            transparent 35%,
+
+            rgba(20,10,40,0.45) 100%
+        );
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+/* ========================================= */
+/* 📼 INTERFERENCIA */
+/* ========================================= */
+
+.vhs-interferencia {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+
+            transparent 0px,
+
+            transparent 5px,
+
+            rgba(255,255,255,0.025) 6px,
+
+            transparent 8px
+        );
+
+    opacity: 0.8;
+
+    animation: interferencia-vhs 0.18s infinite;
+
+    z-index: 2;
+}
+
+
+@keyframes interferencia-vhs {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(1px);
+    }
+
+    75% {
+        transform: translateY(-1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================= */
+/* 📼 MENSAJE */
+/* ========================================= */
+
+.mensaje-vhs {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    font-family: monospace;
+
+    color: white;
+
+    animation:
+        texto-vhs 0.12s infinite;
+
+    text-shadow:
+
+        -2px 0 rgba(255,60,150,0.7),
+
+        2px 0 rgba(80,180,255,0.7),
+
+        0 0 15px rgba(255,255,255,0.6);
+}
+
+
+.mensaje-vhs span {
+
+    display: block;
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+.mensaje-vhs strong {
+
+    display: block;
+
+    font-size: 60px;
+
+    font-weight: normal;
+
+    letter-spacing: 10px;
+}
+
+
+.mensaje-vhs small {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    letter-spacing: 6px;
+}
+
+
+/* ========================================= */
+/* 📺 TEMBLOR VHS */
+/* ========================================= */
+
+@keyframes texto-vhs {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* 📱 AJUSTES PARA CELULARES */
+
+@media (max-width: 600px) {
+.hora-imposible {
+    bottom: 12px;
+    right: 12px;
+    font-size: 9px;
+}
+
+.hora-contenido strong {
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+
+.hora-contenido span {
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.hora-contenido small {
+    font-size: 9px;
+}
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .inicial {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 11px 22px;
+    }
+
+    /* ⭐ Estrella secreta */
+
+    .estrella-secreta {
+        top: 25%;
+        left: 78%;
+        font-size: 14px;
+    }
+
+    /* 📼 Texto VHS */
+
+    .mensaje-vhs span {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .mensaje-vhs strong {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+
+    .mensaje-vhs small {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+}
+/* ========================================= */
+/* 📺 CAM_01 */
+/* ========================================= */
+
+#camara-secreta {
+    display: none;
+}
+
+
+/* 📺 Indicador pequeño */
+
+.camara-indicador {
+
+    position: fixed;
+
+    top: 18px;
+    right: 20px;
+
+    z-index: 100001;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.38);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.25);
+
+    transition:
+        color 0.2s,
+        opacity 0.2s;
+}
+
+
+/* 🔴 REC */
+
+.camara-indicador span {
+
+    margin-left: 7px;
+
+    color: rgba(255,80,100,0.55);
+
+    font-size: 10px;
+}
+
+
+/* 👁️ Al pasar el mouse */
+
+.camara-indicador:hover {
+
+    color: rgba(255,255,255,0.85);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.6);
+}
+
+
+/* ========================================= */
+/* 📺 PANTALLA DE CÁMARA */
+/* ========================================= */
+
+.pantalla-camara {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(5,3,12,0.94);
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* Activar */
+
+#camara-secreta:checked ~ .pantalla-camara {
+
+    display: flex;
+
+    pointer-events: auto;
+}
+
+
+/* ========================================= */
+/* 📼 LÍNEAS DE LA CÁMARA */
+/* ========================================= */
+
+.lineas-camara {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+
+            rgba(255,255,255,0.055) 0px,
+
+            rgba(255,255,255,0.055) 1px,
+
+            transparent 3px,
+
+            transparent 5px
+        );
+
+    animation:
+        movimiento-camara 0.2s infinite;
+}
+
+
+@keyframes movimiento-camara {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================= */
+/* 👁️ TEXTO */
+/* ========================================= */
+
+.texto-camara {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    font-family: monospace;
+
+    color: white;
+
+    text-shadow:
+
+        -2px 0 rgba(255,60,150,0.7),
+
+        2px 0 rgba(80,180,255,0.7),
+
+        0 0 15px rgba(255,255,255,0.5);
+
+    animation:
+        texto-camara 0.15s infinite;
+}
+
+
+.texto-camara span {
+
+    display: block;
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.texto-camara strong {
+
+    display: block;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    letter-spacing: 6px;
+}
+
+
+.texto-camara small {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.65;
+}
+
+
+/* ========================================= */
+/* 📺 PEQUEÑO MOVIMIENTO VHS */
+/* ========================================= */
+
+@keyframes texto-camara {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* ========================================= */
+/* 🌟 ESTRELLA INCORRECTA */
+/* ========================================= */
+
+#estrella-incorrecta {
+    display: none;
+}
+
+
+/* ⭐ La estrella escondida */
+
+.estrella-rara {
+
+    position: fixed;
+
+    top: 13%;
+    left: 42%;
+
+    z-index: 100001;
+
+    color: rgba(255,255,255,0.45);
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5);
+
+    transition:
+        transform 0.25s,
+        color 0.25s,
+        text-shadow 0.25s;
+}
+
+
+/* 👁️ Cuando alguien encuentra la estrella */
+
+.estrella-rara:hover {
+
+    transform: scale(2);
+
+    color: white;
+
+    text-shadow:
+
+        0 0 5px white,
+
+        0 0 15px #f8c8dc,
+
+        0 0 25px #d8b4fe;
+}
+
+
+/* ========================================= */
+/* 🌌 MENSAJE */
+/* ========================================= */
+
+.mensaje-estrella-rara {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            rgba(40,25,65,0.55),
+            rgba(5,3,15,0.92)
+        );
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+/* Activar */
+
+#estrella-incorrecta:checked
+~ .mensaje-estrella-rara {
+
+    display: flex;
+
+    pointer-events: auto;
+}
+
+
+/* ========================================= */
+/* 👁️ TEXTO */
+/* ========================================= */
+
+.estrella-rara-texto {
+
+    text-align: center;
+
+    font-family: monospace;
+
+    color: rgba(255,255,255,0.9);
+
+    animation:
+        estrella-glitch 0.25s infinite;
+
+    text-shadow:
+
+        -1px 0 rgba(255,70,150,0.7),
+
+        1px 0 rgba(80,170,255,0.7),
+
+        0 0 15px rgba(255,255,255,0.35);
+}
+
+
+.estrella-rara-texto span {
+
+    display: block;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 35px;
+
+    opacity: 0.7;
+}
+
+
+.estrella-rara-texto strong {
+
+    display: block;
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 4px;
+}
+
+
+.estrella-rara-texto small {
+
+    display: block;
+
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+}
+
+
+/* ========================================= */
+/* 📺 GLITCH */
+/* ========================================= */
+
+@keyframes estrella-glitch {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-1px);
+    }
+
+    40% {
+        transform: translateX(2px);
+    }
+
+    60% {
+        transform: translateX(-2px);
+    }
+
+    80% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* ========================================= */
+/* 🗂️ ARCHIVO OCULTO */
+/* ========================================= */
+
+#archivo-secreto {
+    display: none;
+}
+
+
+/* 🗂️ Indicador */
+
+.archivo-indicador {
+
+    position: fixed;
+
+    bottom: 18px;
+    left: 20px;
+
+    z-index: 100001;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.16);
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s,
+        text-shadow 0.3s;
+}
+
+
+.archivo-indicador:hover {
+
+    color: rgba(255,255,255,0.7);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.5);
+}
+
+
+/* ========================================= */
+/* 📺 PANTALLA */
+/* ========================================= */
+
+.pantalla-archivo {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(4,3,12,0.95);
+
+    overflow: hidden;
+}
+
+
+#archivo-secreto:checked ~ .pantalla-archivo {
+
+    display: flex;
+}
+
+
+/* ========================================= */
+/* 📼 RUIDO */
+/* ========================================= */
+
+.archivo-ruido {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+
+            transparent 0px,
+
+            transparent 4px,
+
+            rgba(255,255,255,0.05) 5px,
+
+            transparent 7px
+        );
+
+    animation:
+        archivo-interferencia 0.15s infinite;
+}
+
+
+@keyframes archivo-interferencia {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(1px);
+    }
+}
+
+
+/* ========================================= */
+/* 🗂️ CONTENIDO */
+/* ========================================= */
+
+.archivo-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(600px, 80%);
+
+    padding: 35px;
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    background:
+        rgba(15,10,30,0.55);
+
+    box-shadow:
+        0 0 40px rgba(120,80,160,0.15);
+
+    font-family: monospace;
+
+    color: rgba(255,255,255,0.8);
+
+    text-align: left;
+
+    animation:
+        archivo-glitch 0.2s infinite;
+}
+
+
+/* 📁 Título */
+
+.archivo-titulo {
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 25px;
+
+    letter-spacing: 7px;
+
+    color: white;
+
+    text-shadow:
+        -1px 0 rgba(255,70,150,0.7),
+        1px 0 rgba(80,180,255,0.7);
+}
+
+
+/* 📄 Líneas */
+
+.archivo-linea {
+
+    margin: 12px 0;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+}
+
+
+/* ⚠️ Estado */
+
+.archivo-estado {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+.archivo-estado strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: rgba(255,130,150,0.85);
+
+    letter-spacing: 4px;
+}
+
+
+.archivo-contenido small {
+
+    display: block;
+
+    margin-top: 35px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.35;
+}
+
+
+/* ========================================= */
+/* 📺 GLITCH */
+/* ========================================= */
+
+@keyframes archivo-glitch {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-1px);
+    }
+
+    40% {
+        transform: translateX(2px);
+    }
+
+    60% {
+        transform: translateX(0);
+    }
+
+    80% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* ========================================= */
+/* 🕐 LA HORA IMPOSIBLE */
+/* ========================================= */
+
+#hora-secreta {
+    display: none;
+}
+
+
+/* 🕐 Hora escondida */
+
+.hora-imposible {
+
+    position: fixed;
+
+    bottom: 18px;
+    right: 20px;
+
+    z-index: 100001;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.13);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        color 0.3s,
+        text-shadow 0.3s;
+}
+
+
+/* 👁️ Al descubrirla */
+
+.hora-imposible:hover {
+
+    color: rgba(255,255,255,0.7);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.5);
+}
+
+
+/* ========================================= */
+/* 📺 MENSAJE */
+/* ========================================= */
+
+.mensaje-hora {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(5,3,15,0.94);
+
+    overflow: hidden;
+}
+
+
+/* Activar */
+
+#hora-secreta:checked ~ .mensaje-hora {
+
+    display: flex;
+}
+
+
+/* ========================================= */
+/* 🕐 CONTENIDO */
+/* ========================================= */
+
+.hora-contenido {
+
+    text-align: center;
+
+    font-family: monospace;
+
+    color: white;
+
+    animation:
+        tiempo-glitch 0.18s infinite;
+
+    text-shadow:
+
+        -2px 0 rgba(255,60,150,0.7),
+
+        2px 0 rgba(80,180,255,0.7),
+
+        0 0 18px rgba(255,255,255,0.5);
+}
+
+
+/* ⏱️ Hora */
+
+.hora-contenido span {
+
+    display: block;
+
+    font-size: 18px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.7;
+}
+
+
+/* ⚠️ Error */
+
+.hora-contenido strong {
+
+    display: block;
+
+    font-size: 50px;
+
+    font-weight: normal;
+
+    letter-spacing: 8px;
+}
+
+
+/* 👁️ Mensaje */
+
+.hora-contenido small {
+
+    display: block;
+
+    margin-top: 25px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.5;
+}
+
+
+/* ========================================= */
+/* 📼 GLITCH */
+/* ========================================= */
+
+@keyframes tiempo-glitch {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* ================================================= */
+/* 👁️ EASTER EGG: SEÑAL CORRUPTA */
+/* ================================================= */
+
+#terror-glitch {
+    display: none;
+}
+
+
+/* ================================================= */
+/* 📡 ACTIVADOR */
+/* ================================================= */
+
+.terror-trigger {
+
+    position: fixed;
+
+    top: 18px;
+    left: 20px;
+
+    z-index: 100001;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.10);
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        text-shadow 0.2s;
+}
+
+
+.terror-trigger:hover {
+
+    color: rgba(255,255,255,0.7);
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.7);
+}
+
+
+/* ================================================= */
+/* 📺 PANTALLA COMPLETA */
+/* ================================================= */
+
+.terror-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999999;
+
+    display: none;
+
+    overflow: hidden;
+
+    background: #050005;
+
+    pointer-events: none;
+}
+
+
+/* Activar */
+
+#terror-glitch:checked ~ .terror-screen {
+
+    display: block;
+
+    animation:
+        terror-duration 5s steps(1) forwards;
+}
+
+
+/* ================================================= */
+/* 👁️ ROSTRO */
+/* ================================================= */
+
+.terror-face {
+
+    position: absolute;
+
+    inset: -10%;
+
+    background-image:
+        url("terror.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter:
+        contrast(250%)
+        saturate(500%)
+        brightness(0.8);
+
+    opacity: 0;
+
+    mix-blend-mode: screen;
+
+    animation:
+        face-chaos 5s steps(1) forwards;
+}
+
+
+/* ================================================= */
+/* 📺 DISTORSIÓN DEL ROSTRO */
+/* ================================================= */
+
+@keyframes face-chaos {
+
+    0%, 3%, 6%, 9%, 12%, 15%,
+    18%, 21%, 24%, 27%, 30%,
+    33%, 36%, 39%, 42%, 45%,
+    48%, 51%, 54%, 57%, 60%,
+    63%, 66%, 69%, 72%, 75%,
+    78%, 81%, 84%, 87%, 90%,
+    93%, 96%, 100% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: .9;
+        transform: translate(-20%, 5%) scale(1.8);
+    }
+
+    4% {
+        opacity: 0;
+    }
+
+    7% {
+        opacity: 1;
+        transform: translate(25%, -12%) scale(2.4);
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: .8;
+        transform: translate(-5%, 18%) scale(1.3);
+    }
+
+    16% {
+        opacity: 0;
+    }
+
+    19% {
+        opacity: 1;
+        transform: translate(35%, 8%) scale(3);
+    }
+
+    22% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .9;
+        transform: translate(-30%, -15%) scale(1.6);
+    }
+
+    28% {
+        opacity: 0;
+    }
+
+    31% {
+        opacity: 1;
+        transform: translate(10%, 20%) scale(2.7);
+    }
+
+    34% {
+        opacity: 0;
+    }
+
+    37% {
+        opacity: .85;
+        transform: translate(-40%, 0) scale(1.4);
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    43% {
+        opacity: 1;
+        transform: translate(20%, -20%) scale(3.2);
+    }
+
+    46% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: .9;
+        transform: translate(-15%, 10%) scale(2);
+    }
+
+    52% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 1;
+        transform: translate(40%, -5%) scale(2.8);
+    }
+
+    58% {
+        opacity: 0;
+    }
+
+    61% {
+        opacity: .8;
+        transform: translate(-35%, 15%) scale(1.5);
+    }
+
+    64% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 1;
+        transform: translate(5%, -25%) scale(3);
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    73% {
+        opacity: .9;
+        transform: translate(-25%, 5%) scale(2.2);
+    }
+
+    76% {
+        opacity: 0;
+    }
+
+    79% {
+        opacity: 1;
+        transform: translate(30%, 15%) scale(3.4);
+    }
+
+    82% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: .9;
+        transform: translate(-10%, -10%) scale(1.7);
+    }
+
+    88% {
+        opacity: 0;
+    }
+
+    91% {
+        opacity: 1;
+        transform: translate(15%, 5%) scale(2.6);
+    }
+
+    94% {
+        opacity: 0;
+    }
+
+    97% {
+        opacity: 1;
+        transform: translate(-5%, 0) scale(1.2);
+    }
+
+    99% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ================================================= */
+/* 📡 GLITCH LAYERS */
+/* ================================================= */
+
+.glitch-layer {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("terror.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0;
+
+    mix-blend-mode: screen;
+}
+
+
+/* 🔴 Capa 1 */
+
+.glitch-1 {
+
+    filter:
+        saturate(700%)
+        contrast(300%)
+        hue-rotate(320deg);
+
+    animation:
+        glitch-red 5s steps(1) forwards;
+}
+
+
+/* 🔵 Capa 2 */
+
+.glitch-2 {
+
+    filter:
+        saturate(800%)
+        contrast(300%)
+        hue-rotate(180deg);
+
+    animation:
+        glitch-blue 5s steps(1) forwards;
+}
+
+
+/* 🟣 Capa 3 */
+
+.glitch-3 {
+
+    filter:
+        saturate(900%)
+        contrast(350%)
+        hue-rotate(280deg);
+
+    animation:
+        glitch-purple 5s steps(1) forwards;
+}
+
+
+/* ================================================= */
+/* 🔴 GLITCH ROJO */
+/* ================================================= */
+
+@keyframes glitch-red {
+
+    0%, 12%, 20%, 28%, 36%, 45%, 54%, 64%, 73%, 82%, 91%, 100% {
+        opacity: 0;
+    }
+
+    13% {
+        opacity: .8;
+        transform: translateX(-25px);
+        clip-path: inset(20% 0 65% 0);
+    }
+
+    21% {
+        opacity: .7;
+        transform: translateX(35px);
+        clip-path: inset(55% 0 30% 0);
+    }
+
+    37% {
+        opacity: .9;
+        transform: translateX(-45px);
+        clip-path: inset(5% 0 80% 0);
+    }
+
+    55% {
+        opacity: .8;
+        transform: translateX(25px);
+        clip-path: inset(65% 0 15% 0);
+    }
+
+    74% {
+        opacity: .9;
+        transform: translateX(-30px);
+        clip-path: inset(35% 0 45% 0);
+    }
+
+    92% {
+        opacity: .7;
+        transform: translateX(40px);
+        clip-path: inset(75% 0 5% 0);
+    }
+}
+
+
+/* ================================================= */
+/* 🔵 GLITCH AZUL */
+/* ================================================= */
+
+@keyframes glitch-blue {
+
+    0%, 15%, 24%, 34%, 43%, 52%, 62%, 71%, 84%, 100% {
+        opacity: 0;
+    }
+
+    16% {
+        opacity: .7;
+        transform: translateX(30px);
+        clip-path: inset(10% 0 75% 0);
+    }
+
+    25% {
+        opacity: .8;
+        transform: translateX(-40px);
+        clip-path: inset(45% 0 40% 0);
+    }
+
+    44% {
+        opacity: .9;
+        transform: translateX(50px);
+        clip-path: inset(70% 0 15% 0);
+    }
+
+    63% {
+        opacity: .8;
+        transform: translateX(-35px);
+        clip-path: inset(25% 0 60% 0);
+    }
+
+    85% {
+        opacity: .7;
+        transform: translateX(45px);
+        clip-path: inset(60% 0 25% 0);
+    }
+}
+
+
+/* ================================================= */
+/* 🟣 GLITCH MORADO */
+/* ================================================= */
+
+@keyframes glitch-purple {
+
+    0%, 18%, 30%, 41%, 57%, 69%, 80%, 94%, 100% {
+        opacity: 0;
+    }
+
+    19% {
+        opacity: .8;
+        transform: translateX(-50px);
+        clip-path: inset(30% 0 55% 0);
+    }
+
+    31% {
+        opacity: .9;
+        transform: translateX(40px);
+        clip-path: inset(75% 0 10% 0);
+    }
+
+    58% {
+        opacity: .8;
+        transform: translateX(-25px);
+        clip-path: inset(15% 0 70% 0);
+    }
+
+    81% {
+        opacity: .9;
+        transform: translateX(35px);
+        clip-path: inset(50% 0 35% 0);
+    }
+}
+
+
+/* ================================================= */
+/* 📺 LÍNEAS VHS */
+/* ================================================= */
+
+.scanlines {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+
+            rgba(255,255,255,0.08) 0px,
+
+            rgba(255,255,255,0.08) 1px,
+
+            transparent 2px,
+
+            transparent 5px
+        );
+
+    opacity: .8;
+
+    animation:
+        scan-move .08s infinite;
+}
+
+
+@keyframes scan-move {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* ================================================= */
+/* 📡 RUIDO */
+/* ================================================= */
+
+.noise {
+
+    position: absolute;
+
+    inset: -50%;
+
+    background:
+
+        repeating-radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,.25) 0px,
+            rgba(255,255,255,.25) 1px,
+            transparent 2px,
+            transparent 4px
+        );
+
+    opacity: .35;
+
+    mix-blend-mode: screen;
+
+    animation:
+        noise-move .07s infinite;
+}
+
+
+@keyframes noise-move {
+
+    0% {
+        transform: translate(0,0);
+    }
+
+    25% {
+        transform: translate(-5%,4%);
+    }
+
+    50% {
+        transform: translate(4%,-3%);
+    }
+
+    75% {
+        transform: translate(-3%,-5%);
+    }
+
+    100% {
+        transform: translate(5%,3%);
+    }
+}
+
+
+/* ================================================= */
+/* ⚠️ TEXTO */
+/* ================================================= */
+
+.glitch-text {
+
+    position: absolute;
+
+    bottom: 12%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    font-family: monospace;
+
+    font-size: clamp(18px, 4vw, 45px);
+
+    letter-spacing: 10px;
+
+    color: white;
+
+    text-shadow:
+
+        -4px 0 red,
+        4px 0 cyan,
+        0 0 15px white;
+
+    animation:
+        text-glitch .12s infinite;
+}
+
+
+@keyframes text-glitch {
+
+    0% {
+        transform:
+            translateX(-50%)
+            translate(0,0);
+    }
+
+    25% {
+        transform:
+            translateX(-50%)
+            translate(-8px,2px);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            translate(10px,-2px);
+    }
+
+    75% {
+        transform:
+            translateX(-50%)
+            translate(-4px,3px);
+    }
+
+    100% {
+        transform:
+            translateX(-50%)
+            translate(0,0);
+    }
+}
+
+
+/* ================================================= */
+/* ✖ CERRAR */
+/* ================================================= */
+
+.terror-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    z-index: 100;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 35px;
+
+    color: rgba(255,255,255,.5);
+
+    cursor: pointer;
+
+    opacity: .4;
+
+    transition: .2s;
+}
+
+
+.terror-close:hover {
+
+    opacity: 1;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px white;
+}
+
+
+/* ================================================= */
+/* ⏱️ DURACIÓN */
+/* ================================================= */
+
+@keyframes terror-duration {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    96% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
