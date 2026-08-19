@@ -3360,3 +3360,33 @@ html::before {
         opacity: 1;
     }
 }
+.sakura-horror-close {
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    z-index: 20;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+
+    color: rgba(255,255,255,.25);
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.sakura-horror-close:hover {
+
+    color: white;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 20px #f8c8dc;
+}
+
