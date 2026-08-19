@@ -600,3 +600,19 @@ function actualizarReloj() {
 
 actualizarReloj();
 setInterval(actualizarReloj, 1000);
+function actualizarReloj() {
+    const ahora = new Date();
+
+    const horas = String(ahora.getHours()).padStart(2, "0");
+    const minutos = String(ahora.getMinutes()).padStart(2, "0");
+    const segundos = String(ahora.getSeconds()).padStart(2, "0");
+
+    const reloj = document.getElementById("reloj");
+
+    if (reloj) {
+        reloj.textContent = `${horas}:${minutos}:${segundos}`;
+    }
+}
+
+actualizarReloj();
+setInterval(actualizarReloj, 1000);
