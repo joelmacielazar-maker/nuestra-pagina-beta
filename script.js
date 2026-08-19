@@ -584,3 +584,42 @@ if (
     cambiarIdioma(idiomaGuardado);
 
 }
+// ===== RELOJ Y CAMBIO DE FONDO =====
+
+function actualizarHora() {
+    const ahora = new Date();
+
+    const horas = ahora.getHours();
+    const minutos = String(ahora.getMinutes()).padStart(2, "0");
+    const segundos = String(ahora.getSeconds()).padStart(2, "0");
+
+    const reloj = document.getElementById("reloj");
+
+    if (reloj) {
+        reloj.textContent = `${String(horas).padStart(2, "0")}:${minutos}:${segundos}`;
+    }
+
+    document.body.classList.remove(
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+    );
+
+    if (horas >= 6 && horas < 12) {
+        document.body.classList.add("amanecer");
+    } 
+    else if (horas >= 12 && horas < 18) {
+        document.body.classList.add("dia");
+    } 
+    else if (horas >= 18 && horas < 21) {
+        document.body.classList.add("atardecer");
+    } 
+    else {
+        document.body.classList.add("noche");
+    }
+}
+
+actualizarHora();
+
+setInterval(actualizarHora, 1000);
