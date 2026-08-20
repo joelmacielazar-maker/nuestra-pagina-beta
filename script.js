@@ -620,135 +620,169 @@ setInterval(actualizarReloj, 1000);
 // 🌸 SAKURA MUSIC BOX
 // ============================================
 
-const caja=document.getElementById("music-box");
-const notas=document.getElementById("music-notes");
+// ============================================
+// 🌸 SAKURA MUSIC BOX (FNAF SB INSPIRED)
+// ============================================
 
-let reproduciendo=true;
-let intervaloNotas;
+const caja = document.getElementById("music-box");
+const notas = document.getElementById("music-notes");
 
-const audio=new(window.AudioContext||window.webkitAudioContext)();
+if (caja && notas) {
 
-const melodia=[523,587,659,698,659,587,523,392];
-let indice=0;
+    const audio = new (window.AudioContext || window.webkitAudioContext)();
 
-function tocarNota(freq){
+    // Melodía original inspirada en Security Breach
+    const melodia = [
+        440,659,523,
+        494,392,659,
+        440,523,659,
+        392,349,330,
 
-    const osc=audio.createOscillator();
-    const gain=audio.createGain();
+        440,587,523,
+        494,659,784,
+        659,523,494,
+        440,392,330
+    ];
 
-    osc.type="triangle";
-    osc.frequency.value=freq;
+    let indice = 0;
+    let reproduciendo = false;
+    let intervalo = null;
 
-    gain.gain.value=0.03;
+    function tocarNota(freq){
 
-    osc.connect(gain);
-    gain.connect(audio.destination);
+        const osc = audio.createOscillator();
+        const gain = audio.createGain();
 
-    osc.start();
+        const brillo = audio.createOscillator();
+        const brilloGain = audio.createGain();
 
-    gain.gain.exponentialRampToValueAtTime(
-        0.0001,
-        audio.currentTime+0.55
-    );
+        osc.type = "sine";
+        brillo.type = "triangle";
 
-    osc.stop(audio.currentTime+.55);
-}
+        osc.frequency.value = freq;
+        brillo.frequency.value = freq * 2;
 
-function iniciarMusica(){
+        gain.gain.value = 0.025;
+        brilloGain.gain.value = 0.007;
 
-    caja.classList.add("playing");
+        osc.connect(gain);
+        brillo.connect(brilloGain);
 
-    intervaloNotas=setInterval(()=>{
+        gain.connect(audio.destination);
+        brilloGain.connect(audio.destination);
 
-        tocarNota(melodia[indice]);
+        osc.start();
+        brillo.start();
 
-        indice=(indice+1)%melodia.length;
+        gain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            audio.currentTime + 0.8
+        );
 
-        crearNota();
+        brilloGain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            audio.currentTime + 0.5
+        );
 
-    },700);
-
-}
-
-function detenerMusica(){
-
-    clearInterval(intervaloNotas);
-
-    caja.classList.remove("playing");
-
-}
-
-function crearNota(){
-
-    const n=document.createElement("div");
-
-    n.className="note";
-
-    n.textContent=["♪","♫","♬"][Math.floor(Math.random()*3)];
-
-    n.style.animationDuration=(5+Math.random()*2)+"s";
-
-    if(Math.random()<0.25){
-
-        n.classList.add("rebel");
-
-        n.style.setProperty("--rx",(Math.random()*220-110)+"px");
-        n.style.setProperty("--ry",(Math.random()*220-110)+"px");
-
+        osc.stop(audio.currentTime + 0.8);
+        brillo.stop(audio.currentTime + 0.5);
     }
 
-    n.onclick=()=>{
-
-        n.classList.add("pop");
-
-        setTimeout(()=>n.remove(),250);
-
-    };
-
-    notas.appendChild(n);
-
-    setTimeout(()=>n.remove(),7000);
-
-}
-
-caja.onclick=async()=>{
-
-    if(audio.state==="suspended")
-        await audio.resume();
-
-    reproduciendo=!reproduciendo;
-
-    reproduciendo
-        ? iniciarMusica()
-        : detenerMusica();
-
-};
-
-iniciarMusica();
-window.addEventListener("DOMContentLoaded", () => {
-
-    const caja = document.getElementById("music-box");
-    const notas = document.getElementById("music-notes");
-
-    if (!caja || !notas) {
-        console.log("No se encontró la cajita musical");
-        return;
-    }
-
-    caja.addEventListener("click", () => {
+    function crearNota(){
 
         const nota = document.createElement("div");
 
         nota.className = "note";
-        nota.textContent = "♪";
+        nota.textContent = ["♪","♫","♬"][Math.floor(Math.random()*3)];
 
-        nota.style.left = "80px";
-        nota.style.bottom = "80px";
+        nota.style.left = "70px";
+        nota.style.bottom = "60px";
+
+        nota.style.animationDuration = (5 + Math.random()*2) + "s";
+
+        if(Math.random() < 0.20){
+
+            nota.classList.add("rebel");
+
+            nota.style.setProperty("--rx",(Math.random()*240-120)+"px");
+            nota.style.setProperty("--ry",(Math.random()*240-120)+"px");
+        }
+
+        nota.addEventListener("click",()=>{
+
+            nota.classList.add("pop");
+
+            setTimeout(()=>nota.remove(),250);
+
+        });
 
         notas.appendChild(nota);
 
-        setTimeout(() => nota.remove(), 5000);
+        setTimeout(()=>nota.remove(),7000);
+
+    }
+
+    function iniciar(){
+
+        reproduciendo = true;
+
+        caja.classList.add("playing");
+
+        intervalo = setInterval(()=>{
+
+            tocarNota(melodia[indice]);
+
+            indice++;
+
+            if(indice >= melodia.length){
+
+                indice = 0;
+
+                // 🌸 Easter egg raro
+                if(Math.random() < 0.03){
+
+                    tocarNota(311);
+
+                    caja.classList.remove("playing");
+
+                    setTimeout(()=>{
+                        if(reproduciendo)
+                            caja.classList.add("playing");
+                    },500);
+                }
+            }
+
+            crearNota();
+
+        },830);
+
+    }
+
+    function detener(){
+
+        reproduciendo = false;
+
+        clearInterval(intervalo);
+
+        caja.classList.remove("playing");
+
+    }
+
+    caja.addEventListener("click", async ()=>{
+
+        if(audio.state==="suspended")
+            await audio.resume();
+
+        if(reproduciendo){
+
+            detener();
+
+        }else{
+
+            iniciar();
+
+        }
 
     });
 
-});
+}
