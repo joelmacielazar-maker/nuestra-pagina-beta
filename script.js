@@ -616,3 +616,112 @@ function actualizarReloj() {
 
 actualizarReloj();
 setInterval(actualizarReloj, 1000);
+// ============================================
+// 🌸 SAKURA MUSIC BOX
+// ============================================
+
+const caja=document.getElementById("music-box");
+const notas=document.getElementById("music-notes");
+
+let reproduciendo=true;
+let intervaloNotas;
+
+const audio=new(window.AudioContext||window.webkitAudioContext)();
+
+const melodia=[523,587,659,698,659,587,523,392];
+let indice=0;
+
+function tocarNota(freq){
+
+    const osc=audio.createOscillator();
+    const gain=audio.createGain();
+
+    osc.type="triangle";
+    osc.frequency.value=freq;
+
+    gain.gain.value=0.03;
+
+    osc.connect(gain);
+    gain.connect(audio.destination);
+
+    osc.start();
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audio.currentTime+0.55
+    );
+
+    osc.stop(audio.currentTime+.55);
+}
+
+function iniciarMusica(){
+
+    caja.classList.add("playing");
+
+    intervaloNotas=setInterval(()=>{
+
+        tocarNota(melodia[indice]);
+
+        indice=(indice+1)%melodia.length;
+
+        crearNota();
+
+    },700);
+
+}
+
+function detenerMusica(){
+
+    clearInterval(intervaloNotas);
+
+    caja.classList.remove("playing");
+
+}
+
+function crearNota(){
+
+    const n=document.createElement("div");
+
+    n.className="note";
+
+    n.textContent=["♪","♫","♬"][Math.floor(Math.random()*3)];
+
+    n.style.animationDuration=(5+Math.random()*2)+"s";
+
+    if(Math.random()<0.25){
+
+        n.classList.add("rebel");
+
+        n.style.setProperty("--rx",(Math.random()*220-110)+"px");
+        n.style.setProperty("--ry",(Math.random()*220-110)+"px");
+
+    }
+
+    n.onclick=()=>{
+
+        n.classList.add("pop");
+
+        setTimeout(()=>n.remove(),250);
+
+    };
+
+    notas.appendChild(n);
+
+    setTimeout(()=>n.remove(),7000);
+
+}
+
+caja.onclick=async()=>{
+
+    if(audio.state==="suspended")
+        await audio.resume();
+
+    reproduciendo=!reproduciendo;
+
+    reproduciendo
+        ? iniciarMusica()
+        : detenerMusica();
+
+};
+
+iniciarMusica();
