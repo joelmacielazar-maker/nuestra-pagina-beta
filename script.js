@@ -725,3 +725,30 @@ caja.onclick=async()=>{
 };
 
 iniciarMusica();
+window.addEventListener("DOMContentLoaded", () => {
+
+    const caja = document.getElementById("music-box");
+    const notas = document.getElementById("music-notes");
+
+    if (!caja || !notas) {
+        console.log("No se encontró la cajita musical");
+        return;
+    }
+
+    caja.addEventListener("click", () => {
+
+        const nota = document.createElement("div");
+
+        nota.className = "note";
+        nota.textContent = "♪";
+
+        nota.style.left = "80px";
+        nota.style.bottom = "80px";
+
+        notas.appendChild(nota);
+
+        setTimeout(() => nota.remove(), 5000);
+
+    });
+
+});
