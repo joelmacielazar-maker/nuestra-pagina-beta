@@ -3620,3 +3620,138 @@ html::before {
     }
 
 }
+/* ========================================= */
+/* 🌸 SAKURA MUSIC BOX */
+/* ========================================= */
+
+#music-box{
+    position:fixed;
+    bottom:22px;
+    left:22px;
+    width:64px;
+    height:64px;
+    z-index:99999;
+    cursor:pointer;
+    user-select:none;
+}
+
+.box-body{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.lid{
+    position:absolute;
+    width:54px;
+    height:34px;
+    left:5px;
+    top:18px;
+    border-radius:10px;
+    background:linear-gradient(#f8d5e7,#d9b6ff);
+    box-shadow:
+        0 0 15px rgba(255,200,240,.45),
+        inset 0 0 8px rgba(255,255,255,.35);
+}
+
+.handle{
+    position:absolute;
+    right:-6px;
+    top:20px;
+    width:18px;
+    height:18px;
+    border:3px solid #ffe8f5;
+    border-radius:50%;
+    transform-origin:-4px 9px;
+}
+
+#music-box.playing .handle{
+    animation:crank .8s linear infinite;
+}
+
+@keyframes crank{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ========================================= */
+/* 🎵 NOTAS MUSICALES */
+/* ========================================= */
+
+#music-notes{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:99990;
+}
+
+.note{
+    position:absolute;
+    bottom:48px;
+    left:62px;
+
+    font-size:24px;
+    color:#ffe8ff;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 18px #f7a8ff;
+
+    pointer-events:auto;
+    cursor:pointer;
+
+    animation:noteFly linear forwards;
+}
+
+.note.rebel{
+    animation:noteRebel linear forwards;
+}
+
+@keyframes noteFly{
+    from{
+        transform:translate(0,0) scale(.8);
+        opacity:0;
+    }
+    8%{
+        opacity:1;
+    }
+    to{
+        transform:translate(95vw,-35vh) scale(1.25);
+        opacity:0;
+    }
+}
+
+@keyframes noteRebel{
+    0%{
+        transform:translate(0,0) scale(.8);
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    50%{
+        transform:translate(40vw,-20vh) rotate(70deg);
+    }
+    100%{
+        transform:
+            translate(calc(70vw + var(--rx)),calc(-60vh + var(--ry)))
+            rotate(280deg)
+            scale(1.5);
+        opacity:0;
+    }
+}
+
+/* 🫧 POP */
+
+.note.pop{
+    animation:popNote .25s forwards;
+}
+
+@keyframes popNote{
+    to{
+        transform:scale(2.4);
+        opacity:0;
+        filter:blur(4px);
+    }
+}
